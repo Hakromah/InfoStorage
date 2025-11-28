@@ -48,7 +48,7 @@ export default function Search({ data, loading }: Props) {
             />
          </div>
 
-         <h2 className="text-2xl font-bold mb-4">Your Passwords</h2>
+         <h2 className="text-2xl font-bold mb-4 text-blue-500">Your Passwords</h2>
 
          {!filteredData.length ? (
             <p>No matching records found</p>

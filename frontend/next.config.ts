@@ -1,12 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
-
-module.exports = {
   images: {
     remotePatterns: [
       {
@@ -15,6 +9,13 @@ module.exports = {
         port: "1337",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "harmonious-fireworks-bde4521ff5.media.strapiapp.com",
+        pathname: "/**",
+      },
     ],
   },
 };
+
+export default nextConfig;

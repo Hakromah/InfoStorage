@@ -48,7 +48,7 @@ export default function AddUserForm({ onSuccess, onClose }: Props) {
       try {
          const token = localStorage.getItem("strapiToken");
 
-         const res = await fetch("http://127.0.0.1:1337/api/password-entries", {
+         const res = await fetch("https://harmonious-fireworks-bde4521ff5.strapiapp.com/admin/api/password-entries", {
             method: "POST",
             headers: {
                "Content-Type": "application/json",

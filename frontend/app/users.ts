@@ -9,7 +9,7 @@ export async function addUser(formData: FormData) {
    }
 
    // Example API call
-   const res = await fetch("http://127.0.0.1:1337/api/users", {
+   const res = await fetch("https://harmonious-fireworks-bde4521ff5.strapiapp.com/admin/api/users", {
       method: "POST",
       headers: {
          "Content-Type": "application/json"
