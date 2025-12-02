@@ -38,6 +38,12 @@ export async function getHomePage() {
    return await fetchAPI(url.href, { method: "GET" });
 }
 
+// Gets the full URL for a Strapi media asset
+export function getStrapiMedia(url: string) {
+	if (url.startsWith("http")) return url;
+	return `${getStrapiURL()}${url}`;
+}
+
 const passwordEntriesQuery = qs.stringify({
    populate: "*",
    sort: ["appName:asc"],

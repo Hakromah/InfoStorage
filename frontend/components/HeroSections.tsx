@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"; // Required for useState/useEffect
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { getStrapiURL } from "@/utils/get-strapi-url";
 import { getHomePage } from "@/data/loaders";
+import { getStrapiMedia } from "@/data/loaders";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
 
 export default function HeroSections() {
 	// Replace 'any' with the Type interface if available
@@ -26,7 +27,8 @@ export default function HeroSections() {
 		b.__component === "layout.hero-section"
 	);
 
-	const imageUrl = hero?.image?.url ? getStrapiURL(hero.image.url) : null;
+	const imageUrl = getStrapiMedia(hero?.image?.url);
+	console.log("Hero Image:", imageUrl);
 
 	return (
 		<section className="relative h-[90vh] w-full">
